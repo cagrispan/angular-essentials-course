@@ -1,5 +1,6 @@
 <hr>
 <h2>My Cart Component</h2>
+<p *ngIf="!newItem">Enter a new item!</p>
 <input type="text" class="form-control" [(ngModel)]="newItem">
 <button type="button" class="btn" [ngClass]="{'btn-primary': newItem, 'btn-danger':!newItem}" (click)="onAddButtonClick($event)"
     [disabled]="!newItem">Add</button>
